@@ -1,0 +1,127 @@
+.container {
+  text-align: center;
+  margin: 0px auto;
+  width: 90%;
+}
+.container h4 {
+  text-transform: uppercase;
+  margin: 100px auto 50px;
+  font-size: 50px;
+}
+
+/* SearchFlex */
+.container .search-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.container .search-flex .link-api {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  margin-left: 10px;
+  padding: 10px 20px;
+}
+
+.container .search-flex .link-api:hover {
+  color: white;
+  background-color: rgb(81, 81, 81);
+}
+
+.container .search-style {
+  justify-content: end;
+  height: 30px;
+  width: 30%;
+  margin-right: 10px;
+}
+/* End SearchFlex */
+
+/* Card of Table */
+.container .card-flex {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-products {
+  flex: 20%;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.card-products ul {
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+  list-style: none;
+}
+
+.card-products ul .size-image {
+  width: 40%;
+  height: 100px;
+  margin: 20px auto;
+}
+
+.card-products ul .title-data {
+  font-weight: 700;
+}
+
+.card-products ul .data-content {
+  margin-top: 10px;
+}
+
+.card-products ul .data-content .data-content2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 15px 0px;
+}
+
+.card-products ul .data-content .data-content2 li {
+  margin: 0 10px;
+}
+
+.card-products ul .data-content .data-content2 li img {
+  width: 15px;
+}
+/* End Card of Table */
+
+/* Responsive Display */
+@media only screen and (min-width: 1440px) {
+  .card-products {
+    flex: 20% !important;
+  }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1439px) {
+  .card-products {
+    flex: 30% !important;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .card-products {
+    flex: 40%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container .search-flex {
+    flex-direction: column;
+  }
+  .container .search-flex .link-api {
+    width: fit-content;
+    margin: 0px auto;
+  }
+  .container .search-style {
+    width: 90%;
+    margin: 20px auto;
+  }
+  .card-products {
+    flex: 100%;
+  }
+}
