@@ -8,7 +8,7 @@ import './Assets/Style/style.css';
 function Url() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/web-portA4" element={<Home />} />
     </Routes>
   );
 }
