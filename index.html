@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="Assets/Img/book-logo.png" />
+    <title>Booksself Apps</title>
+
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="Assets/Style/CSS/Style.css" />
+  </head>
+  <body>
+    <!-- Zero-section  -->
+    <section id="zero-section">
+      <div class="container-zero">
+        <div class="content-bg-left">
+          <div class="content">
+            <h3>Hello, Nanda Naufal Prayasdewo</h3>
+            <h2>Sudah berapa banyak buku yang anda baca hari ini?</h2>
+          </div>
+        </div>
+        <div class="content-bg-right fade">
+          <img src="Assets/Img/img-content-right-1.jpg" class="size-img-content-right" />
+          <img src="Assets/Img/img-content-right-2.jpg" class="size-img-content-right" />
+          <img src="Assets/Img/img-content-right-3.jpg" class="size-img-content-right" />
+          <img src="Assets/Img/img-content-right-4.jpg" class="size-img-content-right" />
+          <div class="bullets">
+            <span class="bullet"></span>
+            <span class="bullet"></span>
+            <span class="bullet"></span>
+            <span class="bullet"></span>
+          </div>
+        </div>
+        <br />
+      </div>
+    </section>
+    <!-- End zero-section  -->
+    <!-- ===================================================================================================  -->
+    <!-- books-section  -->
+    <section id="books-section" class="padd-section">
+      <div class="container-books">
+        <div class="top-content-books">
+          <button class="add-books" data-modal="modalBook">Add Book</button>
+          <div id="modalBook" class="modal">
+            <div class="content-modal">
+              <div class="forms-add">
+                <form id="forms-books">
+                  <h2>Add Book</h2>
+                  <div class="text-form-add">
+                    <input type="text" name="title" id="title" placeholder="Title of Book" maxlength="248" required />
+                    <input type="text" name="author" id="author" placeholder="Author" maxlength="64" required />
+                    <input type="number" name="year" id="year" placeholder="Year" onKeyPress="if(this.value.length===4)return false;" required />
+                  </div>
+                  <div class="btn-action-form">
+                    <button type="submit" id="save">Submit</button>
+                    <button type="reset" class="close">Close</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-books">
+          <h1>List Books</h1>
+          <div class="status-books">
+            <div class="unread" id="unread">
+              <h4>Belum Dibaca</h4>
+            </div>
+            <div class="dash-section"></div>
+            <div class="read" id="read">
+              <h4>Sudah Dibaca</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End books-section  -->
+
+    <!-- Link To JS -->
+    <script src="Assets/Style/JS/popUP.js"></script>
+    <script src="Assets/Style/JS/sliderContent.js"></script>
+    <script src="Assets/Style/JS/books.js"></script>
+    <script src="Assets/Style/JS/storangeBook.js"></script>
+  </body>
+</html>

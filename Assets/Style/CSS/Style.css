@@ -1,0 +1,414 @@
+/* General */
+body {
+  margin: 0;
+  background-color: #1f1f1f;
+  box-sizing: content-box;
+  scroll-behavior: smooth;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.padd-section {
+  padding: 5rem 0rem;
+}
+
+/* End General */
+/* =================================================================================================== */
+/* Zero Section */
+
+#zero-section .container-zero {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#zero-section .container-zero .content-bg-left {
+  background-image: url('../../Img/bg-zero.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+  width: 70%;
+  height: 600px;
+  position: relative;
+}
+
+#zero-section .container-zero .content-bg-left::after {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 600px;
+  bottom: 0;
+}
+
+#zero-section .container-zero .content-bg-left .content {
+  text-align: left;
+  width: 90%;
+  color: white;
+  margin-left: 10rem;
+  top: 45%;
+  position: relative;
+  z-index: 2;
+}
+
+#zero-section .container-zero .content-bg-left .content h3 {
+  font-size: 25px;
+  margin: 0;
+  font-weight: 400;
+  margin-bottom: 0.3rem;
+}
+
+#zero-section .container-zero .content-bg-left .content h2 {
+  font-size: 50px;
+  margin: 0;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  width: 80%;
+}
+
+#zero-section .container-zero .content-bg-right {
+  width: 30%;
+  position: relative;
+}
+
+#zero-section .container-zero .content-bg-right::after {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 600px;
+  bottom: 0;
+}
+
+#zero-section .container-zero .content-bg-right .size-img-content-right {
+  width: 100%;
+  height: 600px;
+}
+
+#zero-section .container-zero .content-bg-right .bullets {
+  text-align: center;
+  margin-top: -2rem;
+}
+
+.bullet {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #084c48;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 1s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.active {
+  background-color: rgb(255, 255, 255);
+}
+
+/* End Zero Section */
+/* =================================================================================================== */
+/* Books-section */
+
+#books-section .container-books .top-content-books {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+
+#books-section .container-books .top-content-books button {
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border-color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px black;
+  cursor: pointer;
+  height: fit-content;
+  background-color: rgb(8, 76, 72);
+  color: white;
+}
+
+#books-section .container-books .top-content-books button:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+  box-shadow: 5px 5px 5px black;
+}
+
+/* Pop UP modal */
+#books-section .container-books .top-content-books #modalBook {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#books-section .container-books .top-content-books .modal .content-modal {
+  margin: 50px auto;
+  width: 30%;
+}
+
+#books-section .container-books .top-content-books .modal .content-modal .forms-add h2 {
+  margin: 15px 0px 35px 0px;
+  font-weight: 400;
+  color: black;
+  text-align: center;
+}
+
+#books-section .container-books .top-content-books .modal .content-modal .forms-add form {
+  padding: 25px;
+  box-shadow: 0 2px 5px #f5f5f5;
+  background: #eee;
+  margin: 25px auto;
+}
+
+#books-section .container-books .top-content-books .modal .content-modal .forms-add form .text-form-add {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+#books-section .container-books .top-content-books .modal .content-modal .forms-add form .text-form-add input {
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border-color: white;
+  box-shadow: 5px 5px 5px;
+}
+
+#books-section .container-books .top-content-books .modal .content-modal .forms-add form .btn-action-form {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* End PopUP */
+/* =================================================================================================== */
+/* Content Books */
+
+#books-section .container-books .content-books .status-books {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+
+#books-section .container-books .content-books h1 {
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 5rem;
+  text-transform: uppercase;
+}
+
+#books-section .container-books .content-books .unread,
+#books-section .container-books .content-books .read {
+  box-sizing: border-box;
+  width: 49%;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+#books-section .container-books .content-books .status-books .dash-section {
+  border-left: 3px dashed #ffffff;
+  left: 50%;
+  margin: 0px 2rem;
+}
+
+#books-section .container-books .content-books .status-books .list-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #084c48;
+  color: black;
+  margin-bottom: 2rem;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px black;
+  min-height: 15rem;
+}
+
+#books-section .container-books .content-books .status-books .list-container .image-book {
+  width: 20%;
+  padding: 10px 20px;
+}
+
+#books-section .container-books .content-books .status-books .list-container .image-book img {
+  width: 100%;
+}
+
+#books-section .container-books .content-books .status-books .list-container .detail-book {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  text-align: left;
+  padding: 20px;
+}
+
+#books-section .container-books .content-books .status-books .list-container .detail-book h4 {
+  margin: 10px 0px 10px 0px;
+  color: white;
+  font-weight: 600;
+}
+
+#books-section .container-books .content-books .status-books .list-container .detail-book h6 {
+  margin: 5px 0px 0px 0px;
+  color: rgb(162, 162, 162);
+}
+
+#books-section .container-books .content-books .status-books .list-container .detail-book .btn-status .read-button,
+#books-section .container-books .content-books .status-books .list-container .detail-book .btn-status .trash-book,
+#books-section .container-books .content-books .status-books .list-container .detail-book .btn-status .unread-button {
+  width: fit-content;
+  height: fit-content;
+  margin: 1.5rem 0rem 0.5rem 0rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 5px 5px 5px black;
+  cursor: pointer;
+}
+
+#books-section .container-books .content-books .status-books .list-container .detail-book .btn-status .trash-book {
+  background-color: red;
+  color: white;
+}
+
+#books-section .container-books .content-books .status-books .list-container .detail-book .btn-status {
+  display: flex;
+  gap: 15px;
+}
+
+/* End Content Book */
+/* =================================================================================================== */
+/* Mobile Device */
+
+@media only screen and (max-width: 768px) {
+  #zero-section .container-zero {
+    background-image: url('../../Img/bg-zero.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  #zero-section .container-zero::after {
+    content: '';
+    z-index: 1;
+    width: 100%;
+    min-height: 100vh;
+    bottom: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  #zero-section .container-zero .content-bg-left {
+    background: none;
+    width: 90%;
+  }
+
+  #zero-section .container-zero .content-bg-left::after {
+    background: none;
+  }
+
+  #zero-section .container-zero .content-bg-left .content {
+    width: 100%;
+    margin-left: 0rem;
+    top: 55%;
+  }
+
+  #zero-section .container-zero .content-bg-left .content h3 {
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+
+  #zero-section .container-zero .content-bg-left .content h2 {
+    font-size: 30px;
+    width: 100%;
+    margin-bottom: 7rem;
+  }
+
+  #zero-section .container-zero .content-bg-right {
+    visibility: hidden;
+    display: none;
+  }
+
+  /* Book Section */
+  /* =================================================================================================== */
+  /* Mobile Device */
+
+  #books-section .container-books .top-content-books {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #books-section .container-books .top-content-books button {
+    font-size: 15px;
+    padding: 10px 15px;
+    width: fit-content;
+  }
+
+  #books-section .container-books .top-content-books input {
+    font-size: 15px;
+    padding: 10px 15px;
+    width: 80%;
+  }
+
+  /* Pop UP */
+  #books-section .container-books .top-content-books .modal .content-modal .forms-add form {
+    width: fit-content;
+  }
+
+  #books-section .container-books .top-content-books .modal .content-modal .forms-add form .text-form-add {
+    align-items: center;
+  }
+
+  #books-section .container-books .top-content-books .modal .content-modal {
+    width: 100%;
+  }
+
+  /* End Pop UP  */
+  /* =================================================================================================== */
+  /* Content Book */
+
+  #books-section .container-books .content-books h1 {
+    font-size: 30px;
+  }
+
+  #books-section .container-books .content-books .status-books {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #books-section .container-books .content-books .unread,
+  #books-section .container-books .content-books .read {
+    width: 100%;
+  }
+  #books-section .container-books .content-books .status-books .list-container .image-book {
+    display: none;
+    visibility: hidden;
+  }
+
+  #books-section .container-books .content-books .status-books .list-container .detail-book {
+    width: 100%;
+  }
+
+  #books-section .container-books .content-books .status-books .dash-section .dash-section {
+    margin: 0px;
+    display: none;
+    visibility: hidden;
+  }
+  /* End Content Book */
+  /* =================================================================================================== */
+}
+/* End CSS */
